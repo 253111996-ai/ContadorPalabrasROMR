@@ -51,7 +51,6 @@ QPushButton:pressed {
    </string>
   </property>
   <widget class="QWidget" name="centralwidget">
-
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -70,13 +69,12 @@ QPushButton:pressed {
      </font>
     </property>
     <property name="text">
-     <string>Contador de palabras</string>
+     <string>Contador de palabras </string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
-
    <widget class="QLabel" name="labelTexto">
     <property name="geometry">
      <rect>
@@ -90,14 +88,14 @@ QPushButton:pressed {
      <font>
       <family>Segoe UI</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>ESCRIBE TU TEXTO</string>
+     <string>ESCRIBE TU TEXTO Miguel Angel Cabrera Flores</string>
     </property>
    </widget>
-
    <widget class="QLineEdit" name="edtCaracteres">
     <property name="geometry">
      <rect>
@@ -117,7 +115,6 @@ QPushButton:pressed {
      <string>Escribe aquí tu texto...</string>
     </property>
    </widget>
-
    <widget class="QLabel" name="labelResultados">
     <property name="geometry">
      <rect>
@@ -131,6 +128,7 @@ QPushButton:pressed {
      <font>
       <family>Segoe UI</family>
       <pointsize>12</pointsize>
+      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -138,7 +136,6 @@ QPushButton:pressed {
      <string>RESULTADOS</string>
     </property>
    </widget>
-
    <widget class="QLabel" name="tvPalabras">
     <property name="geometry">
      <rect>
@@ -174,7 +171,6 @@ QLabel {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-
    <widget class="QLabel" name="tvCaracteres">
     <property name="geometry">
      <rect>
@@ -210,7 +206,6 @@ QLabel {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-
    <widget class="QPushButton" name="btnContar">
     <property name="geometry">
      <rect>
@@ -232,7 +227,6 @@ QLabel {
      <string>CONTAR TEXTO</string>
     </property>
    </widget>
-
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
