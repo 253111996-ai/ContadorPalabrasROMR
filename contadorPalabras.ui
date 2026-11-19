@@ -6,37 +6,65 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>548</width>
-    <height>600</height>
+    <width>600</width>
+    <height>620</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Contador de palabras</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow { background-color: #202127; }
-QWidget#centralwidget { background-color: #202127; }
-QLabel { color: #F2F2F7; background: transparent; }
-QLineEdit { background-color: #292A33; border: 1px solid #454652; border-radius: 12px; padding: 12px; color: #F2F2F7; selection-background-color: #8056D8; }
-QLineEdit:focus { border: 2px solid #8056D8; }
-QPushButton { background-color: #7650C8; color: #FFFFFF; border: 0px; border-radius: 12px; padding: 10px 18px; font-weight: bold; }
-QPushButton:hover { background-color: #865FE0; }
-QPushButton:pressed { background-color: #6240AA; }</string>
+   <string notr="true">
+QMainWindow, QWidget#centralwidget {
+    background-color: #FFFFFF;
+}
+QLabel {
+    color: #252B36;
+    background: transparent;
+}
+QLineEdit {
+    background-color: #F7F8FA;
+    border: 1px solid #DDE1E7;
+    border-radius: 14px;
+    padding: 15px;
+    color: #252B36;
+    selection-background-color: #3478D4;
+}
+QLineEdit:focus {
+    border: 2px solid #3478D4;
+    background-color: #FFFFFF;
+}
+QPushButton {
+    background-color: #3478D4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #2865B8;
+}
+QPushButton:pressed {
+    background-color: #1F5299;
+}
+   </string>
   </property>
   <widget class="QWidget" name="centralwidget">
+
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>508</width>
-      <height>55</height>
+      <x>35</x>
+      <y>30</y>
+      <width>530</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Segoe UI</family>
-      <pointsize>25</pointsize>
+      <pointsize>24</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -45,16 +73,38 @@ QPushButton:pressed { background-color: #6240AA; }</string>
      <string>Contador de palabras</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
+
+   <widget class="QLabel" name="labelTexto">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>105</y>
+      <width>500</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>11</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>ESCRIBE TU TEXTO</string>
+    </property>
+   </widget>
+
    <widget class="QLineEdit" name="edtCaracteres">
     <property name="geometry">
      <rect>
-      <x>45</x>
-      <y>100</y>
-      <width>458</width>
-      <height>160</height>
+      <x>40</x>
+      <y>145</y>
+      <width>520</width>
+      <height>170</height>
      </rect>
     </property>
     <property name="font">
@@ -67,67 +117,35 @@ QPushButton:pressed { background-color: #6240AA; }</string>
      <string>Escribe aquí tu texto...</string>
     </property>
    </widget>
+
+   <widget class="QLabel" name="labelResultados">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>345</y>
+      <width>520</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>RESULTADOS</string>
+    </property>
+   </widget>
+
    <widget class="QLabel" name="tvPalabras">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>285</y>
-      <width>210</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>16</pointsize>
-      <weight>60</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background-color: #292A33; border: 1px solid #41414D; border-radius: 10px; padding-left: 12px; color: #F2F2F7; }</string>
-    </property>
-    <property name="text">
-     <string>Palabras: 0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="tvCaracteres">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>335</y>
-      <width>250</width>
-      <height>40</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>16</pointsize>
-      <weight>60</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QLabel { background-color: #292A33; border: 1px solid #41414D; border-radius: 10px; padding-left: 12px; color: #F2F2F7; }</string>
-    </property>
-    <property name="text">
-     <string>Caracteres: 0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnContar">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>295</y>
-      <width>165</width>
-      <height>55</height>
+      <x>40</x>
+      <y>390</y>
+      <width>245</width>
+      <height>75</height>
      </rect>
     </property>
     <property name="font">
@@ -138,17 +156,90 @@ QPushButton:pressed { background-color: #6240AA; }</string>
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    background-color: #F2F6FC;
+    border: 1px solid #DCE6F3;
+    border-radius: 12px;
+    padding-left: 12px;
+    color: #3478D4;
+}
+     </string>
+    </property>
     <property name="text">
-     <string>Contar</string>
+     <string>Palabras: 0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
+
+   <widget class="QLabel" name="tvCaracteres">
+    <property name="geometry">
+     <rect>
+      <x>315</x>
+      <y>390</y>
+      <width>245</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel {
+    background-color: #F2F6FC;
+    border: 1px solid #DCE6F3;
+    border-radius: 12px;
+    padding-left: 8px;
+    color: #3478D4;
+}
+     </string>
+    </property>
+    <property name="text">
+     <string>Caracteres: 0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+
+   <widget class="QPushButton" name="btnContar">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>500</y>
+      <width>220</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>CONTAR TEXTO</string>
+    </property>
+   </widget>
+
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>548</width>
+     <width>600</width>
      <height>21</height>
     </rect>
    </property>

@@ -18,8 +18,16 @@ class contadorPalabras(QtWidgets.QMainWindow):
         textoSeparado = texto.split()
         print(textoSeparado)
 
-        #Contar palabras
+        #Contar palabras✅| 
+        cantidadPalabras = len(textoSeparado)
+        self.tvPalabras.setText(f"palabras:{cantidadPalabras}")
         #Contar CAracteres
+        totalCaracteres=0
+        for palabra in textoSeparado:
+            totalCaracteres += len(palabra)
+        totalCaracteres
+        self.tvCaracteres.setText(f"caracteres : {totalCaracteres}")
+         
 
         print("Se ha presionado el boton")
 
