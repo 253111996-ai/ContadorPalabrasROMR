@@ -21,6 +21,7 @@ class contadorPalabras(QtWidgets.QMainWindow):
         #Contar palabras✅| 
         cantidadPalabras = len(textoSeparado)
         self.tvPalabras.setText(f"palabras:{cantidadPalabras}")
+        
         #Contar CAracteres
         totalCaracteres=0
         for palabra in textoSeparado:
@@ -28,8 +29,19 @@ class contadorPalabras(QtWidgets.QMainWindow):
         totalCaracteres
         self.tvCaracteres.setText(f"caracteres : {totalCaracteres}")
          
-
         print("Se ha presionado el boton")
+
+        if (cantidadPalabras > 20):
+            self.tvPalabras.setStyleSheet("color: #ff756b")
+        else:
+            self.tvPalabras.setStyleSheet("color: #3478D4")
+
+        if (totalCaracteres > 120):
+            self.tvCaracteres.setStyleSheet("color: #ff756b")
+        else:
+            self.tvCaracteres.setStyleSheet("color: #3478D4")
+
+
 
 app= QtWidgets.QApplication(sys.argv)
 ventana = contadorPalabras()
